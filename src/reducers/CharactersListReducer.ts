@@ -5,12 +5,14 @@ export interface CharactersListState {
     isLoading: boolean;
     characters: MarvelCharacter[];
     error: string | null;
+    total: number;
 }
 
 const initialState: CharactersListState = {
     isLoading: false,
     characters: [],
     error: null,
+    total: 0,
 };
 
 export const CharactersListReducer = (
@@ -29,6 +31,7 @@ export const CharactersListReducer = (
                 isLoading: false,
                 characters: action.characters,
                 error: null,
+                total: action.total,
             };
         }
         case CharactersListActionTypes.FETCH_CHARACTERS_LIST_ERROR: {

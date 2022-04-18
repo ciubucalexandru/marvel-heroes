@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import CharacterDetails from "../components/details-page/CharacterDetails";
 import MarvelHomepage from "../components/homepage/MarvelHomepage";
 
@@ -7,7 +7,7 @@ const MarvelRoutes: React.FC = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<MarvelHomepage />} />
+                <Route path="/" element={<Navigate to="/characters" replace />} />
                 <Route path="/characters" element={<MarvelHomepage />} />
                 <Route path="/characters/:characterId" element={<CharacterDetails />} />
                 <Route

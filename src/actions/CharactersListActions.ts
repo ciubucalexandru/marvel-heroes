@@ -2,14 +2,21 @@ import { CharactersListActionTypes, MarvelCharacter } from "../utils/types";
 
 export class FetchCharactersListTriggerAction {
     public readonly type = CharactersListActionTypes.FETCH_CHARACTERS_LIST_TRIGGER;
+    public page: number;
+
+    constructor(page: number) {
+        this.page = page;
+    }
 }
 
 export class FetchCharactersListSuccessAction {
     public readonly type = CharactersListActionTypes.FETCH_CHARACTERS_LIST_SUCCESS;
     public characters: MarvelCharacter[];
+    public total: number;
 
-    constructor(characters: MarvelCharacter[]) {
+    constructor(characters: MarvelCharacter[], total: number) {
         this.characters = characters;
+        this.total = total;
     }
 }
 
@@ -27,13 +34,18 @@ export type FetchCharactersListAction =
     | FetchCharactersListSuccessAction
     | FetchCharactersListErrorAction;
 
-export const fetchCharactersListTrigger = (): FetchCharactersListTriggerAction => ({
+export const fetchCharactersListTrigger = (page: number): FetchCharactersListTriggerAction => ({
     type: CharactersListActionTypes.FETCH_CHARACTERS_LIST_TRIGGER,
+    page: page,
 });
 
-export const fetchCharactersListSuccess = (characters: MarvelCharacter[]): FetchCharactersListSuccessAction => ({
+export const fetchCharactersListSuccess = (
+    characters: MarvelCharacter[],
+    total: number,
+): FetchCharactersListSuccessAction => ({
     type: CharactersListActionTypes.FETCH_CHARACTERS_LIST_SUCCESS,
     characters: characters,
+    total: total,
 });
 
 export const fetchCharactersListError = (error: string): FetchCharactersListErrorAction => ({
