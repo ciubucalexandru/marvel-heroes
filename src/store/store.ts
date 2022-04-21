@@ -1,6 +1,6 @@
 import { applyMiddleware, combineReducers, compose, createStore } from "redux";
 import createSagaMiddleware from "redux-saga";
-import { CharacterDetailsReducer } from "../reducers/CharacterDetailsReducer";
+import { CharacterDetailsReducer, CharacterDetailsState } from "../reducers/CharacterDetailsReducer";
 import { CharactersListReducer, CharactersListState } from "../reducers/CharactersListReducer";
 import rootSaga from "../sagas/rootSaga";
 
@@ -18,5 +18,5 @@ sagaMiddleware.run(rootSaga);
 
 export interface AppState {
     charactersList: CharactersListState;
-    characteDetails: any;
+    characterDetails: CharacterDetailsState;
 }

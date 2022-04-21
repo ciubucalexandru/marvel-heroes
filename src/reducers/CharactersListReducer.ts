@@ -28,6 +28,7 @@ export const CharactersListReducer = (
         }
         case CharactersListActionTypes.FETCH_CHARACTERS_LIST_SUCCESS: {
             return {
+                ...state,
                 isLoading: false,
                 characters: action.characters,
                 error: null,

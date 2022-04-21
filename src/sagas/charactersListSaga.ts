@@ -18,7 +18,6 @@ type Params = {
 
 function* fetchCharactersList(action: FetchCharactersListTriggerAction): any {
     const timestamp = new Date().getTime().toString();
-
     const actionPage = action.page < 1 ? 1 : (action.page - 1) * PAGE_SIZE;
 
     const params: Params = {

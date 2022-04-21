@@ -1,3 +1,10 @@
+# For anyone gettting this project, you will need to generate api keys
+
+In order to do this, follow the instructions found at https://developer.marvel.com/docs.
+Create a '.env' file in the root folder, locally. There, create two env variables named:
+REACT_APP_MARVEL_API_KEY_PUBLIC=_insert public key value here_
+REACT_APP_MARVEL_API_KEY_PRIVATE=_insert private key value here_
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
