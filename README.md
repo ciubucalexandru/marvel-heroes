@@ -1,4 +1,4 @@
-# For anyone gettting this project, you will need to generate api keys
+# For anyone getting this project, you will need to generate marvel api keys
 
 In order to do this, follow the instructions found at https://developer.marvel.com/docs.
 Create a '.env' file in the root folder, locally. There, create two env variables:\
