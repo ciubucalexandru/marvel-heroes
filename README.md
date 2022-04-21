@@ -1,9 +1,9 @@
 # For anyone gettting this project, you will need to generate api keys
 
-In order to do this, follow the instructions found at https://developer.marvel.com/docs.
-Create a '.env' file in the root folder, locally. There, create two env variables named:
-REACT_APP_MARVEL_API_KEY_PUBLIC=_insert public key value here_
-REACT_APP_MARVEL_API_KEY_PRIVATE=_insert private key value here_
+In order to do this, follow the instructions found at https://developer.marvel.com/docs.\
+Create a '.env' file in the root folder, locally. There, create two env variables:\
+REACT_APP_MARVEL_API_KEY_PUBLIC=\_insert public key value here*\
+REACT_APP_MARVEL_API_KEY_PRIVATE=\_insert private key value here*\
 
 # Getting Started with Create React App
 
